@@ -1,0 +1,8 @@
+<?php
+    $prod_qty = $row['prod_quantity'];
+
+            if ($prod_qty == '0'){
+                echo "<h1>sold out</h1>";
+            }
+?>
+<input type="button" value="Add to Cart" <?php if ($prod_qty == '0'){ ?> disabled <?php   } ?> onclick="addtocart(<?php echo $row["prod_id"]?>)" />
